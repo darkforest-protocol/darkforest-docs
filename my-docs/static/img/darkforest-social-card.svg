@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#050505"/>
+  <g transform="translate(600,315) scale(3)">
+    <path d="M0 -40 L-20 -15 L-10 -15 L-20 5 L-10 5 L-30 30 L-10 30 L-20 60 L20 60 L10 30 L30 30 L10 5 L20 5 L10 -15 L20 -15 Z" fill="#39FF14"/>
+    <rect x="-5" y="60" width="10" height="20" fill="#39FF14"/>
+  </g>
+  <text x="600" y="500" font-family="'IBM Plex Mono', monospace" font-size="60" font-weight="bold" fill="#39FF14" text-anchor="middle">DarkForest Docs</text>
+</svg>

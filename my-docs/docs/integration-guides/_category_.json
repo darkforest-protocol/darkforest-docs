@@ -1,0 +1,8 @@
+{
+  "label": "Integration Guides",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Comprehensive guides for integrating DarkForest Protocol using different methods."
+  }
+}

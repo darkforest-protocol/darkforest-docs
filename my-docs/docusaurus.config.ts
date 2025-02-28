@@ -98,15 +98,15 @@ const config: Config = {
             },
             {
               label: 'Getting Started',
-              to: '/category/getting-started',
+              to: '/getting-started/quick-start',
             },
             {
               label: 'Integration Guides',
-              to: '/category/integration-guides',
+              to: '/integration-guides/middleware',
             },
             {
               label: 'Reference',
-              to: '/category/reference',
+              to: '/reference/api-reference',
             },
           ],
         },

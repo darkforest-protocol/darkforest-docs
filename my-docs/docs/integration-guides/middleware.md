@@ -434,4 +434,4 @@ With debug mode enabled, the middleware will log information about detected bots
 
 - Learn about [bot patterns](../reference/bot-patterns.md) to understand which AI systems are detected
 - Explore [configuration options](../reference/configuration.md) to customize your implementation
-- View your [analytics dashboard](https://darkforestprotocol.com/dashboard) to track AI bot visits
+- View your [analytics dashboard](https://darkestforest.xyz/dashboard) to track AI bot visits

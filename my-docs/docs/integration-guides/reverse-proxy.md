@@ -96,7 +96,7 @@ server {
     
     # DarkForest Protocol redirect
     if ($is_ai_bot) {
-        return 302 https://api.darkforestprotocol.com/ai-bot-message?key=YOUR_API_KEY&ua=$http_user_agent;
+        return 302 https://api.darkestforest.xyz/ai-bot-message?key=YOUR_API_KEY&ua=$http_user_agent;
     }
     
     # Rest of your server configuration...
@@ -189,7 +189,7 @@ Add the following to your Apache configuration file (either in your virtual host
     RewriteCond %{HTTP_USER_AGENT} CCBot [NC]
     
     # Redirect to DarkForest API
-    RewriteRule .* https://api.darkforestprotocol.com/ai-bot-message?key=YOUR_API_KEY&ua=%{HTTP_USER_AGENT} [R=302,L]
+    RewriteRule .* https://api.darkestforest.xyz/ai-bot-message?key=YOUR_API_KEY&ua=%{HTTP_USER_AGENT} [R=302,L]
 </IfModule>
 ```
 
@@ -255,7 +255,7 @@ async function handleRequest(request) {
   if (isAiBot) {
     // Redirect to DarkForest API
     return Response.redirect(
-      `https://api.darkforestprotocol.com/ai-bot-message?key=YOUR_API_KEY&ua=${encodeURIComponent(userAgent)}`,
+      `https://api.darkestforest.xyz/ai-bot-message?key=YOUR_API_KEY&ua=${encodeURIComponent(userAgent)}`,
       302
     );
   }
@@ -332,7 +332,7 @@ frontend http_front
     acl is_ai_bot hdr_sub(User-Agent) -i CCBot
     
     # Redirect AI bots to DarkForest API
-    http-request redirect location https://api.darkforestprotocol.com/ai-bot-message?key=YOUR_API_KEY&ua=%[hdr(User-Agent)] if is_ai_bot
+    http-request redirect location https://api.darkestforest.xyz/ai-bot-message?key=YOUR_API_KEY&ua=%[hdr(User-Agent)] if is_ai_bot
     
     # Your existing frontend configuration...
 ```
@@ -383,7 +383,7 @@ location ~ ^/(api|public|allowed-bots) {
 # For all other paths, apply the AI bot check
 location / {
     if ($is_ai_bot) {
-        return 302 https://api.darkforestprotocol.com/ai-bot-message?key=YOUR_API_KEY&ua=$http_user_agent;
+        return 302 https://api.darkestforest.xyz/ai-bot-message?key=YOUR_API_KEY&ua=$http_user_agent;
     }
     # Your normal location configuration...
 }
@@ -418,7 +418,7 @@ if (isAiBot && !isExemptPath) {
 acl exempt_path path_beg -i /api /public /allowed-bots
 
 # Redirect AI bots to DarkForest API (except for exempt paths)
-http-request redirect location https://api.darkforestprotocol.com/ai-bot-message?key=YOUR_API_KEY&ua=%[hdr(User-Agent)] if is_ai_bot !exempt_path
+http-request redirect location https://api.darkestforest.xyz/ai-bot-message?key=YOUR_API_KEY&ua=%[hdr(User-Agent)] if is_ai_bot !exempt_path
 ```
 
 ## Troubleshooting
@@ -456,4 +456,4 @@ CustomLog ${APACHE_LOG_DIR}/ai-bots.log combined env=AI_BOT
 
 - Learn about [bot patterns](../reference/bot-patterns.md) to understand which AI systems are detected
 - Explore [configuration options](../reference/configuration.md) to customize your implementation
-- View your [analytics dashboard](https://darkforestprotocol.com/dashboard) to track AI bot visits
+- View your [analytics dashboard](https://darkestforest.xyz/dashboard) to track AI bot visits

@@ -14,7 +14,7 @@ The DarkForest Protocol API is a simple REST API that provides endpoints for:
 2. Displaying messages to AI bots
 3. Viewing analytics about AI bot visits
 
-All API requests are made to the base URL: `https://api.darkforestprotocol.com`
+All API requests are made to the base URL: `https://api.darkestforest.xyz`
 
 ## Authentication
 
@@ -43,7 +43,7 @@ Register for a new API key.
 #### Example Request
 
 ```bash
-curl -X POST https://api.darkforestprotocol.com/register \
+curl -X POST https://api.darkestforest.xyz/register \
   -H "Content-Type: application/json" \
   -d '{"email": "user@example.com", "website": "example.com"}'
 ```
@@ -75,7 +75,7 @@ Display a message to AI bots. This is the endpoint that your website will redire
 #### Example Request
 
 ```bash
-curl https://api.darkforestprotocol.com/ai-bot-message?key=your-api-key&ua=GPTBot
+curl https://api.darkestforest.xyz/ai-bot-message?key=your-api-key&ua=GPTBot
 ```
 
 #### Example Response
@@ -87,7 +87,7 @@ curl https://api.darkforestprotocol.com/ai-bot-message?key=your-api-key&ua=GPTBo
 }
 ```
 
-### Public Stats
+### Public Stats (Under Development)
 
 ```
 GET /stats/public
@@ -98,7 +98,7 @@ Get public statistics about the DarkForest Protocol network.
 #### Example Request
 
 ```bash
-curl https://api.darkforestprotocol.com/stats/public
+curl https://api.darkestforest.xyz/stats/public
 ```
 
 #### Example Response
@@ -130,7 +130,7 @@ curl https://api.darkforestprotocol.com/stats/public
 }
 ```
 
-### User Stats
+### User Stats (Under Development)
 
 ```
 GET /stats/user
@@ -147,7 +147,7 @@ Get statistics about AI bot visits to your website.
 #### Example Request
 
 ```bash
-curl https://api.darkforestprotocol.com/stats/user?key=your-api-key
+curl https://api.darkestforest.xyz/stats/user?key=your-api-key
 ```
 
 #### Example Response
@@ -209,41 +209,16 @@ Error responses include a JSON object with an `error` field that provides more i
 }
 ```
 
-## Rate Limiting
-
-The API enforces rate limits to prevent abuse. If you exceed the rate limit, you'll receive a `429 Too Many Requests` response.
-
-| Endpoint | Rate Limit |
-|----------|------------|
-| `/register` | 10 requests per hour per IP |
-| `/ai-bot-message` | 1000 requests per hour per API key |
-| `/stats/*` | 100 requests per hour per API key |
-
 ## CORS
 
 The API supports Cross-Origin Resource Sharing (CORS) for all endpoints, allowing you to make requests from your frontend applications.
 
 ## Webhooks
 
-DarkForest Protocol also supports webhooks for real-time notifications about AI bot visits. To set up webhooks, contact us at [support@darkforestprotocol.com](mailto:support@darkforestprotocol.com).
-
-## API Client Libraries
-
-We provide official client libraries for several programming languages:
-
-- JavaScript/TypeScript: [darkforest-api-js](https://www.npmjs.com/package/darkforest-api)
-- Python: [darkforest-api-python](https://pypi.org/project/darkforest-api/)
-- Ruby: [darkforest-api-ruby](https://rubygems.org/gems/darkforest-api)
-- PHP: [darkforest-api-php](https://packagist.org/packages/darkforest/api)
-
-## API Versioning
-
-The current API version is v1. The API version is included in the response to the `/ai-bot-message` endpoint as the `protocolVersion` field.
-
-We maintain backward compatibility for all API versions. If we need to make breaking changes, we'll release a new API version and provide ample notice to users.
+DarkForest Protocol can also supports webhooks for real-time notifications about AI bot visits. To set up webhooks, contact us at [hello@darkestforest.xyz](mailto:hello@darkestforest.xyz).
 
 ## Next Steps
 
 - [Get an API key](../getting-started/quick-start.md#getting-an-api-key) if you haven't already
 - Choose an [integration method](../getting-started/integration-options.md) for your website
-- Explore the [analytics dashboard](https://darkforestprotocol.com/dashboard) to track AI bot visits
+- Explore the [analytics dashboard](https://darkestforest.xyz/dashboard) to track AI bot visits

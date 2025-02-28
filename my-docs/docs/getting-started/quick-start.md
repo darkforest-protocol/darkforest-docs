@@ -10,11 +10,11 @@ This guide will help you get up and running with DarkForest Protocol in just a f
 
 Before implementing DarkForest Protocol, you'll need to register for an API key:
 
-1. Visit [https://darkforestprotocol.com/register](https://darkforestprotocol.com/register)
-2. Enter your email address and website domain
+1. Visit [https://darkestforest.xyz](https://darkestforest.xyz/)
+2. Enter your email address and website domain on the *Protocol* page
 3. Click "Register" to receive your API key
 
-Your API key will be sent to your email address immediately. This key is used to authenticate your requests to the DarkForest API and track analytics for your website.
+Your API key will be shown immediately. This key is used to authenticate your requests to the DarkForest API and track analytics for your website.
 
 ## Choosing an Integration Method
 
@@ -76,4 +76,4 @@ curl -A "GPTBot" https://your-website.com
 
 - Learn about [bot patterns](../reference/bot-patterns.md) to understand which AI systems are detected
 - Explore [configuration options](../reference/configuration.md) to customize your implementation
-- View your [analytics dashboard](https://darkforestprotocol.com/dashboard) to track AI bot visits
+- View your [analytics dashboard](https://darkestforest.xyz/dashboard) to track AI bot visits

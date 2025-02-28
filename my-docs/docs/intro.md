@@ -2,47 +2,40 @@
 sidebar_position: 0
 ---
 
-# Introduction to DarkForest Protocol
+# The Boundary
 
-Welcome to the official documentation for the **DarkForest Protocol** - a system that helps websites manage and redirect AI bot traffic.
+    > **Phase 1 of the DarkForest Protocol — Live Now**   
 
-## What is DarkForest Protocol?
+Welcome to the official documentation for **The Boundary**, the first active phase of the [DarkForest Protocol](https://darkfestforest.xyz).
 
-DarkForest Protocol is a lightweight, easy-to-implement solution that helps website owners identify and control access from AI bots and crawlers. It provides a collective approach to managing how AI systems interact with your content.
+## Draw Your Line in the Sand
 
-The protocol works by detecting AI bot traffic through user agent patterns and redirecting them to a central message endpoint, allowing website owners to:
+The Boundary gives you immediate entry to the protocol in just a few methods. It redirects self-identifying AI crawlers to a clear, collective message: respect our boundaries and implement the protocol. 
 
-1. Identify which AI systems are accessing their content
-2. Control access based on their preferences
-3. Collect analytics about AI traffic
-4. Participate in a collective network of websites with shared leverage
+## How it Works
 
-## Why Control AI Bot Access?
+The Boundary uses a simple yet powerful approach:
 
-As AI systems increasingly crawl the web to train on content, website owners face several challenges:
+1. **Detect**: Identify AI bots through their user agent signatures
+2. **Redirect**: Send them to our central API with your unique identifier
+3. **Track**: Gain insights into which AI systems are accessing your content
+4. **Strengthen**: Each implementation increases our collective leverage
 
-- **Server Load**: High-volume AI crawling can increase server costs
-- **Content Protection**: Preventing unauthorized training on proprietary content
-- **Fair Compensation**: Ensuring value exchange for content used in AI training
-- **Terms of Service**: Enforcing your site's terms regarding automated access
-- **Collective Leverage**: Joining with other sites to establish industry standards
+This approach requires minimal resources while creating maximum impact through collective action.
 
-## Benefits of Joining DarkForest Protocol
+## Why Join Now?
 
 By implementing DarkForest Protocol on your website, you gain:
 
-- **Collective Leverage**: Join thousands of websites with a unified approach to AI traffic
-- **Comprehensive Analytics**: Understand which AI systems are accessing your content and how often
-- **Centralized Messaging**: Communicate your terms to AI companies through a single channel
-- **Simple Implementation**: Multiple integration options to fit any tech stack
-- **Future-Proof**: Stay ahead of new AI crawlers with regularly updated bot patterns
+- **Collective Intelligence**: Access the network's shared analytics showing AI crawling patterns across all participating sites
+- **Network Strength**: Join thousands of websites with a unified approach to AI traffic
+- **Future-Ready**: Automatically benefit from Phase 2 (The Alliance) and Phase 3 (The Marketplace) as they launch
+- **Multiple Integration Options**: Implementation methods for any tech stack
 
-## Getting Started
+## Getting Started in 3 Steps
 
-To implement DarkForest Protocol, you'll need:
+1. [**Get Your API Key**](https://darkfestforest.xyz): Your unique identifier in the protocol
+2. **Choose Your Integration Method**: Select the approach that fits your web stack
+3. **Deploy**: Start protecting your content and join the movement
 
-1. **An API Key**: Register to get your unique API key
-2. **Choose an Integration Method**: Select from reverse proxy, middleware, or universal integration
-3. **Deploy**: Add the integration to your website
-
-The following sections will guide you through each integration method with complete examples and instructions.
+The following sections will guide you through each integration option with copy-paste examples for your specific environment. 

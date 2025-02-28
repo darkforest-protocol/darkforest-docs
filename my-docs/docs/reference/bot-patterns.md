@@ -153,4 +153,4 @@ The bot patterns used by DarkForest Protocol are based on research from various 
 - Official documentation from AI companies
 - Community contributions and research
 
-If you discover a new AI bot pattern that should be added to our list, please [contact us](https://darkforestprotocol.com/contact) or open an issue on our GitHub repository.
+If you discover a new AI bot pattern that should be added to our list, please [contact us](https://darkestforest.xyz/contact) or open an issue on our GitHub repository.

@@ -4,13 +4,8 @@ sidebar_position: 4
 
 # Frequently Asked Questions
 
-This page answers common questions about implementing and using DarkForest Protocol.
 
 ## General Questions
-
-### What is DarkForest Protocol?
-
-DarkForest Protocol is a system that helps websites manage and redirect AI bot traffic. It provides a way to identify AI crawlers and bots, control their access to your content, and collect analytics about their visits.
 
 ### Is DarkForest Protocol free to use?
 
@@ -18,7 +13,7 @@ Yes, DarkForest Protocol is free to implement. You only need to register for an 
 
 ### How does DarkForest Protocol detect AI bots?
 
-DarkForest Protocol uses user agent pattern matching to identify known AI crawlers and bots. The list of patterns is regularly updated to include new AI systems as they emerge.
+DarkForest Protocol uses simple user agent pattern matching to identify known AI crawlers and bots. The list of patterns is regularly updated to include new AI systems as they emerge. Phase 2, which is under development, will introduce collective defense strategies that leverage our shared intelligence to protect the network.
 
 ## Implementation Questions
 
@@ -52,7 +47,7 @@ When an AI bot visits your site, DarkForest Protocol:
 
 ### Can I see which AI bots are visiting my site?
 
-Yes, you can access analytics about bot visits through the DarkForest dashboard or API.
+Yes, you can access analytics about bot visits through the DarkForest dashboard or API (under development).
 
 ### What if a bot changes its user agent to avoid detection?
 
@@ -95,4 +90,4 @@ For other integration methods, refer to the specific integration guide.
 If you have questions not answered here, you can:
 - Join our community Discord
 - Open an issue on GitHub
-- Contact support at support@darkforestprotocol.com
+- Contact support at hello@darkestforest.xyz

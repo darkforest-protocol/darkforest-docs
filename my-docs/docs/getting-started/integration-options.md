@@ -38,7 +38,7 @@ server {
     
     # DarkForest Protocol redirect
     if ($is_ai_bot) {
-        return 302 https://api.darkforestprotocol.com/ai-bot-message?key=YOUR_API_KEY&ua=$http_user_agent;
+        return 302 https://api.darkestforest.xyz/ai-bot-message?key=YOUR_API_KEY&ua=$http_user_agent;
     }
 }
 ```
@@ -117,7 +117,7 @@ function handleRequest(request, response):
   // Check if it matches any AI bot patterns
   if matchesAnyPattern(userAgent, AI_BOT_PATTERNS):
     // Redirect to DarkForest API
-    response.redirect("https://api.darkforestprotocol.com/ai-bot-message?key=YOUR_API_KEY&ua=" + encodeURIComponent(userAgent))
+    response.redirect("https://api.darkestforest.xyz/ai-bot-message?key=YOUR_API_KEY&ua=" + encodeURIComponent(userAgent))
     return
   
   // Continue with normal request handling

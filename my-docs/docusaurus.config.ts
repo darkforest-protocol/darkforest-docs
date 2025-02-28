@@ -6,11 +6,11 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'DarkForest Protocol',
-  tagline: 'Manage and redirect AI bot traffic',
+  tagline: 'The internet\'s open-source AI paywall',
   favicon: 'img/favicon.svg',
 
   // Set the production url of your site here
-  url: 'https://docs.darkforest.com',
+  url: 'https://docs.darkestforest.xyz',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -70,12 +70,12 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          href: 'https://darkforestprotocol.com/dashboard',
-          label: 'Dashboard',
+          href: 'https://darkestforest.xyz',
+          label: 'DarkForest Protocol',
           position: 'right',
         },
         {
-          href: 'https://github.com/darkforest/darkforest-protocol',
+          href: 'https://github.com/darkforest-protocol',
           label: 'GitHub',
           position: 'right',
         },
@@ -115,11 +115,11 @@ const config: Config = {
           items: [
             {
               label: 'Discord',
-              href: 'https://discord.gg/darkforest',
+              href: 'https://discord.gg/5g6jtdjMQN',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/darkforest',
+              label: 'Contact Us',
+              href: 'mailto:hello@darkestforest.xyz',
             },
           ],
         },
@@ -133,10 +133,6 @@ const config: Config = {
             {
               label: 'NPM',
               href: 'https://www.npmjs.com/package/darkforest-blocker',
-            },
-            {
-              label: 'Dashboard',
-              href: 'https://darkforestprotocol.com/dashboard',
             },
           ],
         },

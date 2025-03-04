@@ -20,7 +20,7 @@ All API requests are made to the base URL: `https://api.darkestforest.xyz`
 
 Most API endpoints require authentication using your API key. You can include your API key in one of two ways:
 
-1. As a query parameter: `?key=your-api-key`
+1. As a query parameter: `?apiKey=your-api-key`
 2. As an HTTP header: `X-DarkForest-Key: your-api-key`
 
 ## Endpoints
@@ -69,13 +69,13 @@ Display a message to AI bots. This is the endpoint that your website will redire
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
-| `key` | string | Yes | Your API key |
+| `apiKey` | string | Yes | Your API key |
 | `ua` | string | No | The user agent of the AI bot (automatically included when redirecting) |
 
 #### Example Request
 
 ```bash
-curl https://api.darkestforest.xyz/ai-bot-message?key=your-api-key&ua=GPTBot
+curl https://api.darkestforest.xyz/ai-bot-message?apiKey=your-api-key&ua=GPTBot
 ```
 
 #### Example Response
@@ -142,12 +142,12 @@ Get statistics about AI bot visits to your website.
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
-| `key` | string | Yes | Your API key |
+| `apiKey` | string | Yes | Your API key |
 
 #### Example Request
 
 ```bash
-curl https://api.darkestforest.xyz/stats/user?key=your-api-key
+curl https://api.darkestforest.xyz/stats/user?apiKey=your-api-key
 ```
 
 #### Example Response

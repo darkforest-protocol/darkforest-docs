@@ -35,7 +35,7 @@ function handleRequest(request, response):
   // Check if it matches any AI bot patterns
   if matchesAnyPattern(userAgent, AI_BOT_PATTERNS):
     // Redirect to DarkForest API
-    response.redirect("https://api.darkestforest.xyz/ai-bot-message?key=YOUR_API_KEY&ua=" + encodeURIComponent(userAgent))
+    response.redirect("https://api.darkestforest.xyz/ai-bot-message?apiKey=YOUR_API_KEY&ua=" + encodeURIComponent(userAgent))
     return
   
   // Continue with normal request handling
@@ -158,7 +158,7 @@ def check_ai_bot():
     if is_ai_bot:
         # Redirect to DarkForest API
         encoded_ua = urllib.parse.quote(user_agent)
-        return redirect(f'https://api.darkestforest.xyz/ai-bot-message?key={API_KEY}&ua={encoded_ua}')
+        return redirect(f'https://api.darkestforest.xyz/ai-bot-message?apiKey={API_KEY}&ua={encoded_ua}')
 
 @app.route('/')
 def home():
@@ -206,7 +206,7 @@ foreach ($aiBotPatterns as $pattern) {
 // Redirect if it's an AI bot
 if ($isAiBot) {
     $encodedUa = urlencode($userAgent);
-    header("Location: https://api.darkestforest.xyz/ai-bot-message?key={$apiKey}&ua={$encodedUa}");
+    header("Location: https://api.darkestforest.xyz/ai-bot-message?apiKey={$apiKey}&ua={$encodedUa}");
     exit;
 }
 
@@ -250,7 +250,7 @@ class ApplicationController < ActionController::Base
     
     if is_ai_bot
       # Redirect to DarkForest API
-      redirect_to "https://api.darkestforest.xyz/ai-bot-message?key=#{api_key}&ua=#{CGI.escape(user_agent)}"
+      redirect_to "https://api.darkestforest.xyz/ai-bot-message?apiKey=#{api_key}&ua=#{CGI.escape(user_agent)}"
     end
   end
 end
@@ -306,7 +306,7 @@ public class DarkForestInterceptor implements HandlerInterceptor {
         if (isAiBot) {
             // Redirect to DarkForest API
             String encodedUa = URLEncoder.encode(userAgent, StandardCharsets.UTF_8.toString());
-            response.sendRedirect("https://api.darkestforest.xyz/ai-bot-message?key=" + API_KEY + "&ua=" + encodedUa);
+            response.sendRedirect("https://api.darkestforest.xyz/ai-bot-message?apiKey=" + API_KEY + "&ua=" + encodedUa);
             return false;
         }
 
@@ -361,7 +361,7 @@ func darkForestMiddleware(next http.Handler) http.Handler {
 		if isAiBot {
 			// Redirect to DarkForest API
 			encodedUa := url.QueryEscape(userAgent)
-			http.Redirect(w, r, "https://api.darkestforest.xyz/ai-bot-message?key="+apiKey+"&ua="+encodedUa, http.StatusFound)
+			http.Redirect(w, r, "https://api.darkestforest.xyz/ai-bot-message?apiKey="+apiKey+"&ua="+encodedUa, http.StatusFound)
 			return
 		}
 
@@ -437,7 +437,7 @@ public class DarkForestMiddleware
         {
             // Redirect to DarkForest API
             string encodedUa = HttpUtility.UrlEncode(userAgent);
-            context.Response.Redirect($"https://api.darkestforest.xyz/ai-bot-message?key={_apiKey}&ua={encodedUa}");
+            context.Response.Redirect($"https://api.darkestforest.xyz/ai-bot-message?apiKey={_apiKey}&ua={encodedUa}");
             return;
         }
 
@@ -488,7 +488,7 @@ function handleRequest(request, response):
   // Check if it matches any AI bot patterns
   if matchesAnyPattern(userAgent, AI_BOT_PATTERNS):
     // Redirect to DarkForest API
-    response.redirect("https://api.darkestforest.xyz/ai-bot-message?key=YOUR_API_KEY&ua=" + encodeURIComponent(userAgent))
+    response.redirect("https://api.darkestforest.xyz/ai-bot-message?apiKey=YOUR_API_KEY&ua=" + encodeURIComponent(userAgent))
     return
   
   // Continue with normal request handling
@@ -510,7 +510,7 @@ function handleRequest(request, response):
     logAiBotVisit(userAgent, request.path, request.ip)
     
     // Redirect to DarkForest API
-    response.redirect("https://api.darkestforest.xyz/ai-bot-message?key=YOUR_API_KEY&ua=" + encodeURIComponent(userAgent))
+    response.redirect("https://api.darkestforest.xyz/ai-bot-message?apiKey=YOUR_API_KEY&ua=" + encodeURIComponent(userAgent))
     return
   
   // Continue with normal request handling

@@ -466,6 +466,143 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
+### AWS Lambda@Edge with CloudFront
+
+**Step 1: Create Lambda Function**
+- Go to AWS Lambda in the US East (N. Virginia) region
+- Create new function (Author from scratch)
+- Name it darkforest-ai-bot-detection
+- Choose Node.js 18.x
+- Use default permissions
+- Paste the AI bot detection code
+- Replace YOUR_API_KEY with your actual key
+- Click Deploy
+
+**Step 2: Publish Function Version**
+- Click Actions → Publish new version
+- Note the version number (e.g., :1)
+
+**Step 3: Add to CloudFront**
+- Go to your CloudFront distribution
+- Edit the behavior you want to protect
+- Under Function associations → Viewer request
+- Select Lambda@Edge and enter your function ARN with version
+- Save changes and wait ~5-15 minutes for deployment
+
+```javascript
+/**
+ * Lambda@Edge function for DarkForest Protocol - AI Bot Detection
+ * 
+ * This function detects AI bots based on User-Agent and redirects them to the DarkForest API.
+ * Deploy this as a CloudFront Viewer Request trigger.
+ */
+exports.handler = async (event) => {
+  const request = event.Records[0].cf.request;
+  const headers = request.headers;
+  
+  // Get user agent
+  const userAgent = headers['user-agent'] ? headers['user-agent'][0].value : '';
+  
+  // API Key for DarkForest
+  const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+  
+  // Pattern matching for AI bots similar to the Nginx config
+  const isAiBot = checkAiBot(userAgent);
+  
+  if (isAiBot) {
+    // Return a 302 redirect to DarkForest, like in the Nginx config
+    const encodedUserAgent = encodeURIComponent(userAgent);
+    return {
+      status: '302',
+      statusDescription: 'Found',
+      headers: {
+        'location': [{
+          key: 'Location',
+          value: `https://api.darkestforest.xyz/ai-bot-message?apiKey=${apiKey}&ua=${encodedUserAgent}`
+        }],
+        'cache-control': [{
+          key: 'Cache-Control',
+          value: 'no-cache'
+        }]
+      }
+    };
+  }
+  
+  // Not an AI bot, continue with the request
+  return request;
+};
+
+/**
+ * Check if the user agent belongs to an AI bot
+ * 
+ * @param {string} userAgent - The user agent string
+ * @return {boolean} True if the user agent is from an AI bot
+ */
+function checkAiBot(userAgent) {
+  // AI Search Bots
+  const aiSearchBots = [
+    /Applebot/i,
+    /Applebot-Extended/i,
+    /DuckAssistBot/i,
+    /Google-Extended/i,
+    /GoogleOther/i,
+    /GoogleOther-Image/i,
+    /GoogleOther-Video/i,
+    /OAI-SearchBot/i,
+    /PerplexityBot/i,
+    /PetalBot/i,
+    /YouBot/i,
+    /ChatGPT-User/i,
+    /cohere-ai/i
+  ];
+  
+  // AI Crawl Bots
+  const aiCrawlBots = [
+    /AI2Bot/i,
+    /Ai2Bot-Dolma/i,
+    /Amazonbot/i,
+    /anthropic-ai/i,
+    /Claude-Web/i,
+    /ClaudeBot/i,
+    /cohere-ai/i,
+    /cohere-training-data-crawler/i,
+    /Crawlspace/i,
+    /Diffbot/i,
+    /FacebookBot/i,
+    /FriendlyCrawler/i,
+    /GPTBot/i,
+    /ICCCrawler/i,
+    /ImagesiftBot/i,
+    /img2dataset/i,
+    /Kangaroo Bot/i,
+    /Meta-ExternalAgent/i,
+    /Meta-ExternalFetcher/i,
+    /omgili/i,
+    /omgilibot/i,
+    /PanguBot/i,
+    /Scrapy/i,
+    /Sidetrade indexer bot/i,
+    /Timpibot/i,
+    /VelenPublicWebCrawler/i,
+    /Webzio-Extended/i,
+    /Bytespider/i,
+    /iaskspider\/2.0/i,
+    /ISSCyberRiskCrawler/i
+  ];
+  
+  // Open Data Crawlers
+  const openDataCrawlers = [
+    /CCBot/i
+  ];
+  
+  // Combine all bot patterns
+  const allBotPatterns = [...aiSearchBots, ...aiCrawlBots, ...openDataCrawlers];
+  
+  // Check if user agent matches any pattern
+  return allBotPatterns.some(pattern => pattern.test(userAgent));
+}
+```
+
 ## Advanced Considerations
 
 ### Exempting Specific Paths
